@@ -1,6 +1,6 @@
-# Azure Foobar Terraform module
+# Azure Log Analytics Terraform module
 
-Terraform module which creates and Azure Foobar resource.
+Terraform module which creates and Azure Log Analytics workspace.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
