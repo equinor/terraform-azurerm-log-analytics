@@ -11,10 +11,11 @@ resource "azurerm_resource_group" "this" {
   location = var.location
 }
 
-module "foobar" {
-  # source = "github.com/equinor/terraform-azurerm-foobar"
+module "log_analytics" {
+  # source = "github.com/equinor/terraform-azurerm-log-analytics"
   source = "../.."
 
+  workspace_name      = "log-${random_id.this.hex}"
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
 }
