@@ -1,6 +1,6 @@
 # Azure Log Analytics Terraform module
 
-Terraform module which creates and Azure Log Analytics workspace.
+Terraform module which creates an Azure Log Analytics workspace.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
