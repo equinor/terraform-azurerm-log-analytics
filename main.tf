@@ -6,6 +6,8 @@ resource "azurerm_log_analytics_workspace" "this" {
   location            = var.location
   sku                 = "PerGB2018"
   retention_in_days   = var.retention_in_days
+
+  tags = var.tags
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
