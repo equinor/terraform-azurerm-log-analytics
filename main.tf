@@ -11,7 +11,7 @@ resource "azurerm_log_analytics_workspace" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                       = "activity-logs"
+  name                       = "audit-logs"
   target_resource_id         = data.azurerm_subscription.current.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
 
@@ -22,17 +22,17 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
 
   log {
     category = "ServiceHealth"
-    enabled  = true
+    enabled  = false
   }
 
   log {
     category = "ResourceHealth"
-    enabled  = true
+    enabled  = false
   }
 
   log {
     category = "Alert"
-    enabled  = true
+    enabled  = false
   }
 
   log {
@@ -42,7 +42,7 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
 
   log {
     category = "Recommendation"
-    enabled  = true
+    enabled  = false
   }
 
   log {
