@@ -11,6 +11,32 @@ resource "azurerm_log_analytics_workspace" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
+  name                       = "audit-logs-and-all-metrics"
+  target_resource_id         = azurerm_log_analytics_workspace.this.id
+  log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
+
+  log {
+    category = "Audit"
+    enabled  = true
+
+    retention_policy {
+      days    = 0
+      enabled = false
+    }
+  }
+
+  metric {
+    category = "AllMetrics"
+    enabled  = true
+
+    retention_policy {
+      days    = 0
+      enabled = false
+    }
+  }
+}
+
+resource "azurerm_monitor_diagnostic_setting" "subscription" {
   name                       = "audit-logs"
   target_resource_id         = data.azurerm_subscription.current.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
