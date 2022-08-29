@@ -11,7 +11,7 @@ resource "azurerm_log_analytics_workspace" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                       = "audit-logs-and-all-metrics"
+  name                       = "audit-logs"
   target_resource_id         = azurerm_log_analytics_workspace.this.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
 
