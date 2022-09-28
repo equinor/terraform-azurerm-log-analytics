@@ -36,8 +36,12 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
   }
 }
 
+resource "random_id" "this" {
+  byte_length = 8
+}
+
 resource "azurerm_monitor_diagnostic_setting" "subscription" {
-  name                       = "audit-logs"
+  name                       = "audit-logs-${random_id.this.hex}"
   target_resource_id         = data.azurerm_subscription.current.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
 
