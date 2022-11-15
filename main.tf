@@ -1,4 +1,4 @@
-data "azurerm_subscription" "current" {}
+# data "azurerm_subscription" "current" {}
 
 resource "azurerm_log_analytics_workspace" "this" {
   name                = var.workspace_name
@@ -40,48 +40,48 @@ resource "random_id" "this" {
   byte_length = 8
 }
 
-resource "azurerm_monitor_diagnostic_setting" "subscription" {
-  name                       = "audit-logs-${random_id.this.hex}"
-  target_resource_id         = data.azurerm_subscription.current.id
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
+# resource "azurerm_monitor_diagnostic_setting" "subscription" {
+#   name                       = "audit-logs-${random_id.this.hex}"
+#   target_resource_id         = data.azurerm_subscription.current.id
+#   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
 
-  log {
-    category = "Administrative"
-    enabled  = true
-  }
+#   log {
+#     category = "Administrative"
+#     enabled  = true
+#   }
 
-  log {
-    category = "ServiceHealth"
-    enabled  = false
-  }
+#   log {
+#     category = "ServiceHealth"
+#     enabled  = false
+#   }
 
-  log {
-    category = "ResourceHealth"
-    enabled  = false
-  }
+#   log {
+#     category = "ResourceHealth"
+#     enabled  = false
+#   }
 
-  log {
-    category = "Alert"
-    enabled  = false
-  }
+#   log {
+#     category = "Alert"
+#     enabled  = false
+#   }
 
-  log {
-    category = "Autoscale"
-    enabled  = true
-  }
+#   log {
+#     category = "Autoscale"
+#     enabled  = true
+#   }
 
-  log {
-    category = "Recommendation"
-    enabled  = false
-  }
+#   log {
+#     category = "Recommendation"
+#     enabled  = false
+#   }
 
-  log {
-    category = "Security"
-    enabled  = true
-  }
+#   log {
+#     category = "Security"
+#     enabled  = true
+#   }
 
-  log {
-    category = "Policy"
-    enabled  = true
-  }
-}
+#   log {
+#     category = "Policy"
+#     enabled  = true
+#   }
+# }
