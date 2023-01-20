@@ -30,40 +30,20 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
   log {
     category = "Administrative"
     enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 
   log {
     category = "Alert"
     enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 
   log {
     category = "Policy"
     enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 
   log {
     category = "Security"
     enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 }
