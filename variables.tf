@@ -13,6 +13,12 @@ variable "location" {
   type        = string
 }
 
+variable "log_analytics_destination_type" {
+  description = "The type of log analytics destination to use for this Log Analytics Workspace."
+  type        = string
+  default     = "AzureDiagnostics"
+}
+
 variable "retention_in_days" {
   description = "The number of days that logs should be retained."
   type        = number

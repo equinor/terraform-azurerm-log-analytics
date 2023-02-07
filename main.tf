@@ -9,13 +9,13 @@ resource "azurerm_log_analytics_workspace" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                       = "audit-logs"
-  target_resource_id         = azurerm_log_analytics_workspace.this.id
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
+  name                           = "audit-logs"
+  target_resource_id             = azurerm_log_analytics_workspace.this.id
+  log_analytics_workspace_id     = azurerm_log_analytics_workspace.this.id
+  log_analytics_destination_type = var.log_analytics_destination_type
 
-  log {
+  enabled_log {
     category = "Audit"
-    enabled  = true
 
     retention_policy {
       days    = 0
