@@ -27,23 +27,19 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
   target_resource_id         = data.azurerm_subscription.this.id
   log_analytics_workspace_id = module.log_analytics.workspace_id
 
-  log {
+  enabled_log {
     category = "Administrative"
-    enabled  = true
   }
 
-  log {
+  enabled_log {
     category = "Alert"
-    enabled  = true
   }
 
-  log {
+  enabled_log {
     category = "Policy"
-    enabled  = true
   }
 
-  log {
+  enabled_log {
     category = "Security"
-    enabled  = true
   }
 }
