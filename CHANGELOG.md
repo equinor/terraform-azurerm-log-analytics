@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.3.1...v1.4.0) (2023-03-30)
+
+
+### Features
+
+* output customer ID and shared key ([#19](https://github.com/equinor/terraform-azurerm-log-analytics/issues/19)) ([bf0a17c](https://github.com/equinor/terraform-azurerm-log-analytics/commit/bf0a17cf1593798382cf187640295d826e10a2fb))
+
 ## [1.3.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.3.0...v1.3.1) (2023-02-08)
 
 
