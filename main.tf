@@ -14,12 +14,11 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
   log_analytics_workspace_id     = azurerm_log_analytics_workspace.this.id
   log_analytics_destination_type = var.log_analytics_destination_type
 
-  enabled_log {
-    category = "Audit"
+  dynamic "enabled_log" {
+    for_each = toset(var.diagnostic_setting_enabled_log_categories)
 
-    retention_policy {
-      days    = 0
-      enabled = false
+    content {
+      category = enabled_log.value
     }
   }
 

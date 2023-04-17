@@ -13,16 +13,25 @@ variable "location" {
   type        = string
 }
 
+variable "retention_in_days" {
+  description = "The number of days that logs should be retained."
+  type        = number
+  default     = 90
+}
+
 variable "log_analytics_destination_type" {
   description = "The type of log analytics destination to use for this Log Analytics Workspace."
   type        = string
   default     = null
 }
 
-variable "retention_in_days" {
-  description = "The number of days that logs should be retained."
-  type        = number
-  default     = 90
+variable "diagnostic_setting_enabled_log_categories" {
+  description = "A list of log categories to be enabled for this diagnostic setting."
+  type        = list(string)
+
+  default = [
+    "Audit"
+  ]
 }
 
 variable "tags" {
