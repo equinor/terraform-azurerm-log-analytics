@@ -28,10 +28,7 @@ variable "log_analytics_destination_type" {
 variable "diagnostic_setting_enabled_log_categories" {
   description = "A list of log categories to be enabled for this diagnostic setting."
   type        = list(string)
-
-  default = [
-    "Audit"
-  ]
+  default     = ["Audit"]
 }
 
 variable "tags" {
