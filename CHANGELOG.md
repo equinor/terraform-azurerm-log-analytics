@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.4.0...v1.5.0) (2023-04-19)
+
+
+### Features
+
+* set diagnostic setting enabled log categories ([#23](https://github.com/equinor/terraform-azurerm-log-analytics/issues/23)) ([7083869](https://github.com/equinor/terraform-azurerm-log-analytics/commit/708386906c92200291191a5f7d63fec370776940))
+
 ## [1.4.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.3.1...v1.4.0) (2023-03-30)
 
 
