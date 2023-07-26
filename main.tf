@@ -10,10 +10,12 @@ resource "azurerm_log_analytics_workspace" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                           = "audit-logs"
-  target_resource_id             = azurerm_log_analytics_workspace.this.id
-  log_analytics_workspace_id     = azurerm_log_analytics_workspace.this.id
-  log_analytics_destination_type = var.log_analytics_destination_type
+  name                       = "audit-logs"
+  target_resource_id         = azurerm_log_analytics_workspace.this.id
+  log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
+
+  # Ref: https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/monitor_diagnostic_setting#log_analytics_destination_type
+  log_analytics_destination_type = null
 
   dynamic "enabled_log" {
     for_each = toset(var.diagnostic_setting_enabled_log_categories)
