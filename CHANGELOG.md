@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.5.0...v2.0.0) (2023-07-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* disable local authentication by default ([#26](https://github.com/equinor/terraform-azurerm-log-analytics/issues/26))
+
+### Features
+
+* disable local authentication by default ([#26](https://github.com/equinor/terraform-azurerm-log-analytics/issues/26)) ([2cb87b4](https://github.com/equinor/terraform-azurerm-log-analytics/commit/2cb87b49a04044ed3faefef487c9862e094ee382))
+
+
+### Bug Fixes
+
+* don't specify Log Analytics destination type ([#28](https://github.com/equinor/terraform-azurerm-log-analytics/issues/28)) ([2488bec](https://github.com/equinor/terraform-azurerm-log-analytics/commit/2488becb33e484e064fc23c4603c3d4484a86f46))
+
 ## [1.5.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v1.4.0...v1.5.0) (2023-04-19)
 
 
