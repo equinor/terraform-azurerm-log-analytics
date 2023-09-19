@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.0...v2.1.1) (2023-09-19)
+
+
+### Reverts
+
+* don't send activity logs to Log Analytics ([#32](https://github.com/equinor/terraform-azurerm-log-analytics/issues/32)) ([a7618da](https://github.com/equinor/terraform-azurerm-log-analytics/commit/a7618da267e59d53c7569177ace20a004bc255aa))
+
 ## [2.1.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.0.0...v2.1.0) (2023-09-07)
 
 
