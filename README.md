@@ -7,4 +7,4 @@ Terraform module which creates an Azure Log Analytics workspace.
 
 ## Prerequisites
 
-- Azure role `Log Analytics Contributor` at the subscription scope.
+- Azure role `Contributor` at the resource group scope.
