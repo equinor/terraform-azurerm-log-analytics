@@ -45,3 +45,7 @@ Terraform module which creates an Azure Log Analytics workspace.
     ```console
     go test -timeout 60m
     ```
+
+## Contributing
+
+See [Contributing guidelines](CONTRIBUTING.md).
