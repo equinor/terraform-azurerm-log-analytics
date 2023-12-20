@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.1...v2.1.2) (2023-12-20)
+
+
+### Bug Fixes
+
+* remove diagnostic setting retention policies ([#39](https://github.com/equinor/terraform-azurerm-log-analytics/issues/39)) ([17efee1](https://github.com/equinor/terraform-azurerm-log-analytics/commit/17efee155843612c947b281862ca110895e2f9a8))
+
 ## [2.1.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.0...v2.1.1) (2023-09-19)
 
 
