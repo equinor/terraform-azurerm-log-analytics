@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.2...v2.2.0) (2024-02-26)
+
+
+### Features
+
+* variable for diagnostic settng metric ([#44](https://github.com/equinor/terraform-azurerm-log-analytics/issues/44)) ([db51c3d](https://github.com/equinor/terraform-azurerm-log-analytics/commit/db51c3d8edd45f983d693143f1371f94e775dd86))
+
 ## [2.1.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.1...v2.1.2) (2023-12-20)
 
 
