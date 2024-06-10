@@ -14,7 +14,7 @@ variable "location" {
 }
 
 variable "local_authentication_disabled" {
-  description = "Specifies if the Log Analytics Workspace should enforce authentication using Azure AD."
+  description = "Should local authentication using shared key be disabled for this Log Analytics workspace? If value is true, Microsoft Entra authentication must be used instead."
   type        = bool
   default     = true
 }
