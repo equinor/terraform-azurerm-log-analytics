@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.0...v2.2.1) (2024-08-19)
+
+
+### Documentation
+
+* update variable descriptions ([90ff7dd](https://github.com/equinor/terraform-azurerm-log-analytics/commit/90ff7ddfdc16e77421fb9ccb7225a6d0e63ecd12))
+
 ## [2.2.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.1.2...v2.2.0) (2024-02-26)
 
 
