@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.1...v2.2.2) (2024-08-27)
+
+
+### Documentation
+
+* add features list to README ([#55](https://github.com/equinor/terraform-azurerm-log-analytics/issues/55)) ([e77a9d2](https://github.com/equinor/terraform-azurerm-log-analytics/commit/e77a9d2d58db33b3a421388f1f12dd5b66e100d4))
+
 ## [2.2.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.0...v2.2.1) (2024-08-19)
 
 
