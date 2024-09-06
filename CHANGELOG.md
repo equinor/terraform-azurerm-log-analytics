@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.2...v2.2.3) (2024-09-06)
+
+
+### Documentation
+
+* add default data retention to features list in README ([#57](https://github.com/equinor/terraform-azurerm-log-analytics/issues/57)) ([549a99a](https://github.com/equinor/terraform-azurerm-log-analytics/commit/549a99a13ea692529cd6517bfec9ba14037e656f))
+
 ## [2.2.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.1...v2.2.2) (2024-08-27)
 
 
