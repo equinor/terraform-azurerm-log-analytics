@@ -11,6 +11,11 @@ resource "azurerm_log_analytics_workspace" "this" {
   retention_in_days             = var.retention_in_days
 
   tags = var.tags
+
+  lifecycle {
+    # Prevent accidental destroy of Log Analytics workspace.
+    prevent_destroy = true
+  }
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
