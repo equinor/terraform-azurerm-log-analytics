@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.3...v2.3.0) (2024-09-30)
+
+
+### Features
+
+* prevent accidental destroy of workspace ([#59](https://github.com/equinor/terraform-azurerm-log-analytics/issues/59)) ([fb2013b](https://github.com/equinor/terraform-azurerm-log-analytics/commit/fb2013b104d271e14ce60c859f077c706806c42a))
+
+
+### Bug Fixes
+
+* correct minimum required Azure provider version ([#60](https://github.com/equinor/terraform-azurerm-log-analytics/issues/60)) ([69dbca6](https://github.com/equinor/terraform-azurerm-log-analytics/commit/69dbca6fa70b38211e3f9dc6c4138770f0a8d8bf))
+
 ## [2.2.3](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.2...v2.2.3) (2024-09-06)
 
 
