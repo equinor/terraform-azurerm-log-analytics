@@ -20,45 +20,25 @@ Terraform module which creates Azure Monitor Log Analytics resources.
 
 ## Usage
 
-1. Login to Azure:
+```terraform
+provider "azurerm" {
+  features {}
+}
 
-    ```console
-    az login
-    ```
+module "log_analytics" {
+  source  = "equinor/log-analytics/azurerm"
+  version = "~> 2.3"
 
-1. Create a Terraform configuration file `main.tf` and add the following example configuration:
+  workspace_name      = "example-workspace"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+}
 
-    ```terraform
-    provider "azurerm" {
-      features {}
-    }
-
-    module "log_analytics" {
-      source  = "equinor/log-analytics/azurerm"
-      version = "~> 2.3"
-
-      workspace_name      = "example-workspace"
-      resource_group_name = azurerm_resource_group.example.name
-      location            = azurerm_resource_group.example.location
-    }
-
-    resource "azurerm_resource_group" "example" {
-      name     = "example-resources"
-      location = "westeurope"
-    }
-    ```
-
-1. Install required provider plugins and modules:
-
-    ```console
-    terraform init
-    ```
-
-1. Apply the Terraform configuration:
-
-    ```console
-    terraform apply
-    ```
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "westeurope"
+}
+```
 
 ## Development
 
