@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.3.0...v2.4.0) (2025-03-14)
+
+
+### Features
+
+* send diagnostic to separate workspace ([#62](https://github.com/equinor/terraform-azurerm-log-analytics/issues/62)) ([57074ed](https://github.com/equinor/terraform-azurerm-log-analytics/commit/57074edbb78f526b10beb76f5d33267acb7acde2))
+
 ## [2.3.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.2.3...v2.3.0) (2024-09-30)
 
 
