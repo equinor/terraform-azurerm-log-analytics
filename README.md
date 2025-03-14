@@ -1,57 +1,43 @@
-# Azure Log Analytics Terraform module
+# Terraform module for Azure Monitor Log Analytics
 
-[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/terraform-azurerm-log-analytics/badge)](https://scm-compliance-api.radix.equinor.com/repos/equinor/terraform-azurerm-log-analytics/badge)
-[![Equinor Terraform Baseline](https://img.shields.io/badge/Equinor%20Terraform%20Baseline-1.0.0-blueviolet)](https://github.com/equinor/terraform-baseline)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![GitHub License](https://img.shields.io/github/license/equinor/terraform-azurerm-log-analytics)](https://github.com/equinor/terraform-azurerm-log-analytics/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/equinor/terraform-azurerm-log-analytics)](https://github.com/equinor/terraform-azurerm-log-analytics/releases/latest)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-Terraform module which creates Azure Log Analytics resources.
+Terraform module which creates Azure Monitor Log Analytics resources.
 
 ## Features
 
+- Log Analytics workspace created in specified resource group.
 - Microsoft Entra authentication enforced by default.
 - Data retention set to 90 days by default.
 - Audit logs sent to created Log Analytics workspace by default.
 
-## Development
+## Prerequisites
 
-1. Read [this document](https://code.visualstudio.com/docs/devcontainers/containers).
+- Azure role `Contributor` at specified resource group.
 
-1. Clone this repository.
+## Usage
 
-1. Configure Terraform variables in a file `.devcontainer/devcontainer.env`:
+```terraform
+provider "azurerm" {
+  features {}
+}
 
-    ```env
-    TF_VAR_resource_group_name=
-    TF_VAR_location=
-    ```
+module "log_analytics" {
+  source  = "equinor/log-analytics/azurerm"
+  version = "~> 2.3"
 
-1. Open repository in dev container.
+  workspace_name      = "example-workspace"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+}
 
-## Testing
-
-1. Change to the test directory:
-
-    ```console
-    cd test
-    ```
-
-1. Login to Azure:
-
-    ```console
-    az login
-    ```
-
-1. Set active subscription:
-
-    ```console
-    az account set -s <SUBSCRIPTION_NAME_OR_ID>
-    ```
-
-1. Run tests:
-
-    ```console
-    go test -timeout 60m
-    ```
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "westeurope"
+}
+```
 
 ## Contributing
 
