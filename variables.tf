@@ -19,6 +19,13 @@ variable "local_authentication_disabled" {
   default     = true
 }
 
+variable "log_analytics_workspace_id" {
+  description = "The ID of a Log Analytics workspace to send diagnostics to. If value is null, diagnostics will be sent to this Log Analytics workspace."
+  type        = string
+  nullable    = true
+  default     = null
+}
+
 variable "retention_in_days" {
   description = "The number of days that logs should be retained."
   type        = number
