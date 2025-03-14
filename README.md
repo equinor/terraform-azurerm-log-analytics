@@ -9,6 +9,7 @@ Terraform module which creates Azure Monitor Log Analytics resources.
 
 ## Features
 
+- Log Analytics workspace created in given resource group.
 - Microsoft Entra authentication enforced by default.
 - Data retention set to 90 days by default.
 - Audit logs sent to created Log Analytics workspace by default.
