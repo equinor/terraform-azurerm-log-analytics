@@ -1,8 +1,9 @@
 # Azure Log Analytics Terraform module
 
-[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/terraform-azurerm-log-analytics/badge)](https://scm-compliance-api.radix.equinor.com/repos/equinor/terraform-azurerm-log-analytics/badge)
-[![Equinor Terraform Baseline](https://img.shields.io/badge/Equinor%20Terraform%20Baseline-1.0.0-blueviolet)](https://github.com/equinor/terraform-baseline)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![GitHub License](https://img.shields.io/github/license/equinor/terraform-azurerm-log-analytics)](https://github.com/equinor/terraform-azurerm-log-analytics/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/equinor/terraform-azurerm-log-analytics)](https://github.com/equinor/terraform-azurerm-log-analytics/releases/latest)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/terraform-azurerm-log-analytics/badge)](https://developer.equinor.com/governance/scm-policy/)
 
 Terraform module which creates Azure Log Analytics resources.
 
