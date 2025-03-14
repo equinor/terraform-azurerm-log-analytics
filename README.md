@@ -14,6 +14,10 @@ Terraform module which creates Azure Monitor Log Analytics resources.
 - Data retention set to 90 days by default.
 - Audit logs sent to created Log Analytics workspace by default.
 
+## Prerequisites
+
+- Azure role `Contributor` at specified resource group.
+
 ## Development
 
 1. Read [this document](https://code.visualstudio.com/docs/devcontainers/containers).
