@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.0...v2.4.1) (2025-04-24)
+
+
+### Documentation
+
+* update README ([2bf8876](https://github.com/equinor/terraform-azurerm-log-analytics/commit/2bf8876d55eef65769b757afd3e7c8a5477a4802))
+
 ## [2.4.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.3.0...v2.4.0) (2025-03-14)
 
 
