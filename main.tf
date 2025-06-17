@@ -1,7 +1,3 @@
-locals {
-  diagnostic_setting_metric_categories = ["AllMetrics"]
-}
-
 resource "azurerm_log_analytics_workspace" "this" {
   name                          = var.workspace_name
   resource_group_name           = var.resource_group_name
@@ -34,13 +30,11 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
     }
   }
 
-  dynamic "metric" {
-    for_each = toset(concat(local.diagnostic_setting_metric_categories, var.diagnostic_setting_enabled_metric_categories))
+  dynamic "enabled_metric" {
+    for_each = toset(var.diagnostic_setting_enabled_metric_categories)
 
     content {
-      # Azure expects explicit configuration of both enabled and disabled metric categories.
-      category = metric.value
-      enabled  = contains(var.diagnostic_setting_enabled_metric_categories, metric.value)
+      category = enabled_metric.value
     }
   }
 }
