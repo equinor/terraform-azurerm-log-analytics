@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.1...v2.4.2) (2025-06-17)
+
+
+### Bug Fixes
+
+* argument metric for resource azurerm_monitor_diagnostic_setting has been deprecated ([#66](https://github.com/equinor/terraform-azurerm-log-analytics/issues/66)) ([b4829e6](https://github.com/equinor/terraform-azurerm-log-analytics/commit/b4829e69914cb86d27e12984d1279fbbcf966852))
+
 ## [2.4.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.0...v2.4.1) (2025-04-24)
 
 
