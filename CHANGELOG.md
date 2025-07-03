@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.3](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.2...v2.4.3) (2025-07-03)
+
+
+### Bug Fixes
+
+* argument `local_authentication_disabled` has been deprecated ([#68](https://github.com/equinor/terraform-azurerm-log-analytics/issues/68)) ([cbd6869](https://github.com/equinor/terraform-azurerm-log-analytics/commit/cbd6869ed8c38af79bf17c026c939d690f79dc83))
+
 ## [2.4.2](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.1...v2.4.2) (2025-06-17)
 
 
