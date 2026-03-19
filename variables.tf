@@ -26,10 +26,23 @@ variable "log_analytics_workspace_id" {
   default     = null
 }
 
-variable "retention_in_days" {
-  description = "The number of days that logs should be retained."
+variable "daily_quota_gb" {
+  description = "The daily data ingestion cap in GB for this Log Analytics workspace."
   type        = number
+  nullable    = false
+  default     = 5
+}
+
+variable "retention_in_days" {
+  description = "The number of days that logs should be retained. Value must be between 30 and 730."
+  type        = number
+  nullable    = false
   default     = 90
+
+  validation {
+    condition     = var.retention_in_days >= 30 && var.retention_in_days <= 730
+    error_message = "Retention must be between 30 and 730 days."
+  }
 }
 
 variable "diagnostic_setting_enabled_log_categories" {
@@ -41,6 +54,13 @@ variable "diagnostic_setting_enabled_log_categories" {
 variable "diagnostic_setting_enabled_metric_categories" {
   description = "A list of metric categories to be enabled for this diagnostic setting."
   type        = list(string)
+  default     = []
+}
+
+variable "action_group_ids" {
+  description = "A list of IDs for action groups to send alerts to."
+  type        = list(string)
+  nullable    = false
   default     = []
 }
 
