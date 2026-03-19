@@ -10,7 +10,7 @@ Terraform module which creates Azure Log Analytics resources.
 - Data retention set to 90 days by default.
 - Audit logs sent to created Azure Log Analytics workspace by default.
 - (Optional) Alert notifications sent to given Azure Monitor action groups:
-  - Daily data ingestion cap reached
+  - Daily Data Ingestion Cap Reached
 
 ## Prerequisites
 

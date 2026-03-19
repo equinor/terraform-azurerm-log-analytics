@@ -43,7 +43,7 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
 
 # Ref: https://learn.microsoft.com/en-us/azure/azure-monitor/logs/daily-cap#alert-when-daily-cap-is-reached
 resource "azurerm_monitor_scheduled_query_rules_alert_v2" "daily_quota_reached" {
-  name                = "Daily data ingestion cap reached - ${azurerm_log_analytics_workspace.this.name}"
+  name                = "Daily Data Ingestion Cap Reached - ${azurerm_log_analytics_workspace.this.name}"
   resource_group_name = var.resource_group_name
   location            = var.location
   scopes              = [azurerm_log_analytics_workspace.this.id]
