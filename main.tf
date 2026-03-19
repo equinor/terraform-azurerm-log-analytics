@@ -59,8 +59,8 @@ resource "azurerm_monitor_scheduled_query_rules_alert_v2" "daily_quota_reached" 
     threshold               = 0
   }
 
-  evaluation_frequency = "PT5M" # Evaluate logs every 5 minutes.
   window_duration      = "PT5M" # Evaluate logs from the last 5 minutes.
+  evaluation_frequency = "PT5M" # Evaluate logs every 5 minutes.
 
   severity = 2 # Warning
 
