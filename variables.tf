@@ -30,7 +30,7 @@ variable "daily_quota_gb" {
   description = "The daily data ingestion cap in GB for this Log Analytics workspace."
   type        = number
   nullable    = false
-  default     = 5
+  default     = 10
 }
 
 variable "retention_in_days" {
