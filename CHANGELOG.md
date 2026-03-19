@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.3...v2.5.0) (2026-03-19)
+
+
+### Features
+
+* set daily data ingestion cap to 10 GB by default ([#70](https://github.com/equinor/terraform-azurerm-log-analytics/issues/70)) ([ff2baac](https://github.com/equinor/terraform-azurerm-log-analytics/commit/ff2baacc73f291f05c30752a900d935c32f4a1c8))
+
 ## [2.4.3](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.2...v2.4.3) (2025-07-03)
 
 
