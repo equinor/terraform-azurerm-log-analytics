@@ -4,7 +4,9 @@ resource "azurerm_log_analytics_workspace" "this" {
   location                     = var.location
   local_authentication_enabled = !var.local_authentication_disabled
   sku                          = "PerGB2018"
-  retention_in_days            = var.retention_in_days
+
+  daily_quota_gb    = var.daily_quota_gb
+  retention_in_days = var.retention_in_days
 
   tags = var.tags
 
@@ -37,4 +39,37 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
       category = enabled_metric.value
     }
   }
+}
+
+# Ref: https://learn.microsoft.com/en-us/azure/azure-monitor/logs/daily-cap#alert-when-daily-cap-is-reached
+resource "azurerm_monitor_scheduled_query_rules_alert_v2" "daily_quota_reached" {
+  name                = "Daily Data Ingestion Cap Reached - ${azurerm_log_analytics_workspace.this.name}"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  scopes              = [azurerm_log_analytics_workspace.this.id]
+
+  criteria {
+    query = <<-QUERY
+      _LogOperation | where Category =~ "Ingestion" | where Detail contains "OverQuota"
+    QUERY
+
+    time_aggregation_method = "Count"
+    resource_id_column      = "_ResourceId"
+    operator                = "GreaterThan"
+    threshold               = 0
+  }
+
+  window_duration      = "PT5M" # Evaluate logs from the last 5 minutes.
+  evaluation_frequency = "PT5M" # Evaluate logs every 5 minutes.
+
+  severity = 2 # Warning
+
+  # Query validation fails during creation if no logs exist yet.
+  skip_query_validation = true
+
+  action {
+    action_groups = var.action_group_ids
+  }
+
+  tags = var.tags
 }
