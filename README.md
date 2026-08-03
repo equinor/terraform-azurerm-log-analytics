@@ -14,7 +14,7 @@ Terraform module which creates Azure Log Analytics resources.
 
 ## Prerequisites
 
-- Terraform `>= 1.15.0`.
+- Terraform `>= 1.1.0, < 2.0.0`.
 - Azure role `Contributor` at the resource group scope.
 - Azure role `Monitoring Contributor` at the Azure Monitor action group scopes.
 - With AzureRM v5, Azure resource provider registration is a separate subscription-scope bootstrap step. Ensure required providers such as `Microsoft.OperationalInsights` and `Microsoft.Insights` are registered before `terraform apply`, ideally by a platform or subscription admin identity.
