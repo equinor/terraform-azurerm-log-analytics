@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.5.0...v2.5.1) (2026-08-04)
+
+
+### Code Refactoring
+
+* prepare module to acommodate azurerm v5.0 ([#72](https://github.com/equinor/terraform-azurerm-log-analytics/issues/72)) ([7f689da](https://github.com/equinor/terraform-azurerm-log-analytics/commit/7f689da65e5ee3e92b9cf5591d881fc42799e753))
+
 ## [2.5.0](https://github.com/equinor/terraform-azurerm-log-analytics/compare/v2.4.3...v2.5.0) (2026-03-19)
 
 
