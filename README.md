@@ -18,8 +18,7 @@ Terraform module which creates Azure Log Analytics resources.
 - AzureRM `>= 4.35.0, < 6.0`.
 - Azure role `Contributor` at the resource group scope.
 - Azure role `Monitoring Contributor` at the Azure Monitor action group scopes.
-- Ensure required Azure resource providers such as `Microsoft.OperationalInsights` and `Microsoft.Insights` are registered before `terraform apply`, ideally by a platform or subscription admin identity.
-- This registration step is separate from least-privilege module applies for both AzureRM v4 and v5; AzureRM v5 just makes that separation explicit because it no longer auto-registers providers by default.
+- Azure resource providers `Microsoft.OperationalInsights` and `Microsoft.Insights` registered for your subscription.
 
 ## Usage
 
